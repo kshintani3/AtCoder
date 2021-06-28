@@ -10,6 +10,6 @@ for i in range(n):
 
 for i in range(200):
     x = a_list[i]
-    ans += x * (x-1) / 2
+    ans += x * (x - 1) / 2
 
 print(int(ans))
