@@ -7,6 +7,7 @@ S_list = sorted(list(S))
 comb_list = list(set(itertools.permutations(S_list)))
 
 ans_list = []
+
 for i in comb_list:
     ans_list.append("".join(i))
 
