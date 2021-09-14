@@ -18,7 +18,6 @@ dist[0] = 0
 dp[0] = 1
 
 que = deque((0,))
-print(que)
 
 while que:
     u = que.popleft()
