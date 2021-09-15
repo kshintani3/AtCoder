@@ -1,5 +1,3 @@
-from collections import deque
-
 s = input()
 a = [int(c) for c in s]
 
