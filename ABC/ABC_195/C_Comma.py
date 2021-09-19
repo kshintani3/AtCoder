@@ -3,10 +3,7 @@ a = [int(c) for c in s]
 
 a_list = []
 
-if len(a) % 3 == 1:
-    a.insert(0, 0)
-    a.insert(0, 0)
-elif len(a) % 3 == 2:
+while len(a) % 3 != 0:
     a.insert(0, 0)
 
 for i in range(len(a) // 3):
