@@ -4,7 +4,9 @@ N = int(input())
 
 n_list = []
 
+# bの最小が2 -> aの最大はNの平方根
 a_max = math.ceil(math.sqrt(N))
+# aの最小が2 -> bの最大はNの2分の1
 b_max = math.ceil(N / 2)
 
 for a in range(2, a_max + 1):
