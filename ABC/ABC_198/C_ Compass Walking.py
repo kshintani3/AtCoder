@@ -1,14 +1,15 @@
 import math
-def hosuu():
-    r, xg, yg = map(int,input().split())
-    ans = 0
-    kyori = math.sqrt(xg**2 + yg**2)
-    idou = 0
-    if kyori < r:
-        ans += 1
-    while kyori > idou:
-        ans += 1
-        idou += r
-    
-    print(int(ans))
-hosuu()
+
+R, X, Y = map(int, input().split())
+
+k = math.sqrt(X ** 2 + Y ** 2)
+i = 0
+
+ans = 0
+if k < R:
+    ans = 1
+while k > i:
+    ans += 1
+    i += R
+
+print(ans)

@@ -1,12 +1,9 @@
-n = int(input())
+_ = int(input())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-a.sort()
-b.sort()
+ans = min(b) - max(a) + 1
+if ans < 0:
+    ans = 0
 
-c = b[0] - a[-1] + 1
-if c < 0:
-    c = 0
-
-print(c)
+print(ans)

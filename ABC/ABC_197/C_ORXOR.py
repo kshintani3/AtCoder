@@ -1,25 +1,19 @@
-def kai():
-    from itertools import product
+from itertools import product
 
-    n = int(input())
-    ai = list(map(int,input().split()))
+N = int(input())
+A = list(map(int, input().split()))
 
-    min = 2 ** 30
+mi = 2 ** 30
 
-    for bit in product((True, False), repeat= n-1):
-        bit = list(bit) + [True]
-        ored = 0
-        xored = 0
-        for i in range(n):
-            ored = ored | ai[i]
-            if bit[i]:
-                xored = xored ^ ored
-                ored = 0
-        if xored < min:
-            min = xored
-    print(min)
-
-# or |
-# xor ^
-
-kai()
+for bit in product((True, False), repeat=N - 1):
+    bit = list(bit) + [True]
+    a_or = 0
+    a_xor = 0
+    for i in range(N):
+        a_or = a_or | A[i]
+        if bit[i]:
+            a_xor = a_xor ^ a_or
+            a_or = 0
+    if a_xor < mi:
+        mi = a_xor
+print(mi)

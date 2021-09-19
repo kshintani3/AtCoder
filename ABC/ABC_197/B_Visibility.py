@@ -1,33 +1,30 @@
-ra = list(map(int, input().split()))
-s = [list(input()) for i in range(ra[0])]
+H, W, X, Y = map(int, input().split())
+s = [list(input()) for i in range(H)]
 
-h = ra[0] - 1
-w = ra[1] - 1
-x = ra[2] - 1
-y = ra[3] - 1
-
+X -= 1
+Y -= 1
 count = 1
 
-for i in range(y): #(x,y)から左方向,w-y=2
-    if s[x][y-i-1] == '.':
+for l in range(Y):  # (X,Y)から左方向
+    if s[X][Y - l - 1] == '.':
         count += 1
     else:
         break
 
-for i in range(w-y): #(x,y)から右方向
-    if s[x][y+i+1] == '.':
+for r in range(W - Y - 1):  # (X,Y)から右方向
+    if s[X][Y + r + 1] == '.':
         count += 1
     else:
         break
 
-for i in range(x): #(x,y)から上方向
-    if s[x-i-1][y] == '.':
+for u in range(X):  # (X,Y)から上方向
+    if s[X - u - 1][Y] == '.':
         count += 1
     else:
         break
 
-for i in range(h-x): #(x,y)から下方向
-    if s[x+i+1][y] == '.':
+for d in range(H - X - 1):  # (X,Y)から下方向
+    if s[X + d + 1][Y] == '.':
         count += 1
     else:
         break
