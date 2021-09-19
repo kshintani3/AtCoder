@@ -1,8 +1,7 @@
-n = int(input())
+import math
 
-ans = n // 100
+N = int(input())
 
-if n % 100 != 0:
-    ans += 1
+ans = math.ceil(N / 100)
 
 print(ans)
