@@ -1,2 +1,2 @@
-x = input().split(".")
-print(x[0])
+X = input().split(".")
+print(X[0])

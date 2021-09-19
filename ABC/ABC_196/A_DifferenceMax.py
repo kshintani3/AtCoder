@@ -1,10 +1,6 @@
-li = [input().split() for l in range(2)]
+_, b = map(float, input().split())
+c, _ = map(float, input().split())
 
-a = float(li[0][0])
-b = float(li[0][1])
-c = float(li[1][0])
-d = float(li[1][1])
+ma = int(b - c)
 
-max = int(b - c)
-
-print(max)
+print(ma)
