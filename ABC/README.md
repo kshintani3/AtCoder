@@ -1,1 +1,1 @@
-# AtCoder Regular Contest
+# AtCoder Beginner Contest
