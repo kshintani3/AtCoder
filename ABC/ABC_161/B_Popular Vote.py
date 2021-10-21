@@ -1,0 +1,5 @@
+_, M = map(int, input().split())
+a = list(map(int, input().split()))
+a.sort(reverse=True)
+a_sum = sum(a)
+print("Yes" if a[M - 1] >= a_sum / (4 * M) else "No")
