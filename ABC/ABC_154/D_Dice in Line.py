@@ -1,17 +1,9 @@
 N, K = map(int, input().split())
 p = list(map(int, input().split()))
-e_li = [0]
 
-for i in range(1, max(p) + 1):
-    e_li.append((1 + i) * i / (2 * i))
-
-ans = 0
-for i in p[:K]:
-    ans += e_li[i]
-
-k_sum = ans
+e_li = [sum(p[0:K])]
 for i in range(N - K):
-    k_sum = k_sum - e_li[p[i]] + e_li[p[i + K]]
-    if k_sum > ans:
-        ans = k_sum
-print(ans)
+    e_li.append(e_li[i] - p[i] + p[i + K])
+print((max(e_li) + K) / 2)
+# max(e_li) = pi + pi+1 + ... + pi+K-1
+# ans = (1 + pi)/2 + (1 + pi+1)/2 + ... + (1 + pi+K-1)/2
