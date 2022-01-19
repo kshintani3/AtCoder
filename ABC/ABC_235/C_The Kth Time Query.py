@@ -1,5 +1,6 @@
 N, Q = map(int, input().split())
 a = list(map(int, input().split()))
+
 a_max = max(a)
 a_dict = {}
 
