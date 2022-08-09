@@ -2,10 +2,10 @@ h1, h2, h3, w1, w2, w3 = map(int, input().split())
 
 ans = 0
 
-for a in range(1, min(h1, w1) + 1):
-    for b in range(1, min(h1, w2) + 1):
-        for c in range(1, min(h2, w1) + 1):
-            for d in range(1, min(h2, w2) + 1):
+for a in range(1, min(h1, w1) - 1):
+    for b in range(1, min(h1, w2) - 1):
+        for c in range(1, min(h2, w1) - 1):
+            for d in range(1, min(h2, w2) - 1):
                 ac = a + c
                 ab = a + b
                 bd = b + d
