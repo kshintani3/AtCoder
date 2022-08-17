@@ -1,6 +1,6 @@
 N = int(input())
 mod = 10 ** 9 + 7
-ans = 0
+
 # 0~9
 c_09 = (10 ** N) % mod
 
